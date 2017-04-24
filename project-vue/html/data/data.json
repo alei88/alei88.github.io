@@ -1,0 +1,37 @@
+{
+        "content": [
+        {
+            "src":"images/radio4.png",
+            "b":"贝斯",
+            "h3":"摇滚音乐",
+            "p":"摇滚（Rock and Roll）是一种音乐类型，起源于1940年代末期的美国，1950年代早期开始流行，迅速风靡全球",
+            "src1":"images/tou4.png",
+            "span":"用户名"
+        },
+        {
+            "src":"images/radio1.png",
+            "b":"钢琴",
+            "h3":"说唱音乐",
+            "p":"摇滚rap",
+            "src1":"images/tou1.png",
+            "span":"用户名10"
+        },
+         {
+            "src":"images/radio3.png",
+            "b":"爵士鼓",
+            "h3":"名族音乐",
+            "p":"迅速风靡全球",
+            "src1":"images/tou3.png",
+            "span":"用户名小强"
+        },
+
+         {
+            "src":"images/radio2.png",
+            "b":"长号",
+            "h3":"流行音乐",
+            "p":"1950年代早期开始流行，迅速风靡全球",
+            "src1":"images/tou2.png",
+            "span":"大强"
+        }
+    ]
+}

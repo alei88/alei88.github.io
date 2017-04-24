@@ -1,0 +1,137 @@
+<!DOCTYPE html>                                                  
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>kimi</title>
+    <meta name="keywords" content="个人微博、音乐、web"/>
+    <meta name="description" content="个人微博"/>
+    <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <Link rel="stylesheet" type="text/css" href="/project-vue/css/index.css"/>
+    <script type="text/javascript" src="/project-vue/js/jquery.js" source="widget"></script>
+    <script type="text/javascript" src="/project-vue/js/sea.js" source="widget"></script>
+</head>
+<body>
+<header class="lm-head">
+    <div class="head-portrait pr">
+        <img src="images/toux.png" id="imghead" alt="" onClick="$('#previewImg').click();"/>
+        <input type="file" onChange="previewImage(this)" id="previewImg" style="width:120px;display:none;"/>
+        <span>kimi<span>
+        <var class="pa"></var>
+    </div>
+</header>
+<div class="concern">
+    <p>让我们一起感受一下音乐</p>
+    <section class="clearfix">
+        <span><i>29</i><var>关注</var></span>
+        <span><i>46</i><var>粉丝</var></span>
+        <span><i>89</i><var>被赞</var></span>
+    </section>
+    <a href="javascript:;" class="guanzhu">关注</a>
+</div>
+<div class="lunbo" class="lunbo swiper-container" id="swiper-container1">
+    <h2>你可能感兴趣的用户</h2>
+    <ol id="tab" class="swiper-wrapper clearfix">
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+        <li class="swiper-slide">
+            <article>
+                <a href="###" class="a-img pr"><img src="images/photo1.png"><em></em></a>
+                <h3><a href="#">姓名</a></h3>
+                <span>钢琴音乐制作人</span>
+                <i>11111关注</i>
+                <a href="javascript:;" class="guanzhu guanzhu1">关注</a>
+            </article>
+        </li>
+    </ol>
+    <div class="swiper-pagination hide">&nbsp;</div>
+</div>
+<div class="shuoshuo" id="shuoshuo" v-cloak>
+    <h2 class="clearfix"><span>说说</span><em></em><span>4</span></h2>
+    <ol class="clearfix" id="test">
+        <li class="item" v-for="item in resume.content" track-by="$index">
+            <div class="li">
+                <article>
+                    <a href="###" class="a-img pr"><img v-bind:src="item.src"><span class="yueqi"></span><b>{{item.b}}</b>
+                    <em>关注</em><i></i><var class="guankan">99</var></a>
+                    <h3>{{item.h3}}</h3>
+                    <p>{{item.p}}</p>
+                    <section class="clearfix">
+                        <cite>点赞</cite>
+                        <b></b>
+                    </section>
+                </article>
+                <div class="ding-toux clearfix">
+                    <img v-bind:src="item.src1" alt="" class="touxiang4">
+                    <span>{{item.span}}</span>
+                </div>
+            </div>
+        </li>
+    </ol>
+    <div class="load" v-on:click="jiazai()">点击加载更多</div>
+</div>
+<script>
+    
+    seajs.use("ereny",function (app) {
+        app.init();
+    });
+    seajs.use("upload");
+</script>
+
+</body>
+</html>
